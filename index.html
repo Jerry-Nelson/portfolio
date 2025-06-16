@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jerry Nelson Portfolio</title>
+
+    <!-- Tailwind CDN with dark mode support -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      };
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in-up {
+        animation: fadeInUp 0.7s ease-out both;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 font-sans">
+
+    <!-- Dark Mode Toggle Button -->
+    <div class="fixed top-4 right-4 z-50">
+      <button onclick="document.documentElement.classList.toggle('dark')" class="bg-gray-200 dark:bg-gray-700 text-xs px-3 py-1 rounded shadow hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+        Toggle Dark
+      </button>
+    </div>
+
+    <!-- Navbar -->
+    <header class="bg-white dark:bg-gray-800 shadow sticky top-0 z-40">
+      <div class="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-lg font-bold">Jerry Nelson</h1>
+        <button id="menu-toggle" class="sm:hidden block text-gray-800 dark:text-gray-100">
+          ☰
+        </button>
+        <ul id="nav-menu" class="hidden sm:flex space-x-6 text-sm font-semibold">
+          <li><a href="#about" class="hover:text-blue-600">About</a></li>
+          <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
+          <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
+          <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+          <li>
+            <a href="MyCV.pdf" target="_blank" class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 transition">
+              Resume
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- Mobile Menu -->
+      <ul id="mobile-menu" class="sm:hidden hidden px-6 pb-4 space-y-2 text-sm font-semibold">
+        <li><a href="#about" class="block hover:text-blue-600">About</a></li>
+        <li><a href="#skills" class="block hover:text-blue-600">Skills</a></li>
+        <li><a href="#projects" class="block hover:text-blue-600">Projects</a></li>
+        <li><a href="#contact" class="block hover:text-blue-600">Contact</a></li>
+        <li>
+          <a href="MyCV.pdf" target="_blank" class="inline-block bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 transition">
+            Resume
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <!-- Hero -->
+    <section class="text-center py-20 bg-blue-50 dark:bg-gray-800 fade-in-up px-4">
+      <h2 class="text-4xl font-bold">Data Analyst & Financial Enthusiast</h2>
+      <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">Transforming data into actionable insights</p>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="max-w-screen-xl mx-auto py-20 px-6 flex flex-col md:flex-row items-center gap-10 fade-in-up">
+      <img src="profile.jpg" alt="Profile" class="rounded-full w-48 h-48 object-cover border-4 border-blue-300" />
+      <div>
+        <h3 class="text-2xl font-bold mb-4">About Me</h3>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          Hi, I’m Jerry Nelson Cobbinah. A passionate data analyst with a strong interest in finance. I love turning numbers into stories and making complex data understandable. I recently completed my degree in Actuarial Science and I’m building a solid portfolio of real-world projects.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="bg-gray-100 dark:bg-gray-800 py-20 fade-in-up px-6">
+      <div class="max-w-screen-xl mx-auto">
+        <h3 class="text-2xl font-bold text-center mb-8">Skills</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center">
+          <!-- Each skill box -->
+          <div class="bg-white dark:bg-gray-700 p-4 rounded shadow flex flex-col items-center">
+            <img src="https://img.icons8.com/color/48/microsoft-excel-2019--v1.png" class="w-12 h-12 mb-2" />
+            <span>Excel</span>
+          </div>
+          <div class="bg-white dark:bg-gray-700 p-4 rounded shadow flex flex-col items-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-12 h-12 mb-2" />
+            <span>SQL</span>
+          </div>
+          <div class="bg-white dark:bg-gray-700 p-4 rounded shadow flex flex-col items-center">
+            <img src="https://img.icons8.com/color/48/power-bi.png" class="w-12 h-12 mb-2" />
+            <span>Power BI</span>
+          </div>
+          <div class="bg-white dark:bg-gray-700 p-4 rounded shadow flex flex-col items-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-12 h-12 mb-2" />
+            <span>Python</span>
+          </div>
+          <div class="bg-white dark:bg-gray-700 p-4 rounded shadow flex flex-col items-center">
+            <img src="https://img.icons8.com/fluency/48/broom.png" class="w-12 h-12 mb-2" />
+            <span>Data Cleaning</span>
+          </div>
+          <div class="bg-white dark:bg-gray-700 p-4 rounded shadow flex flex-col items-center">
+            <img src="https://img.icons8.com/color/48/combo-chart--v1.png" class="w-12 h-12 mb-2" />
+            <span>Data Visualization</span>
+          </div>
+          <div class="bg-white dark:bg-gray-700 p-4 rounded shadow flex flex-col items-center">
+            <img src="https://img.icons8.com/fluency/48/accounting.png" class="w-12 h-12 mb-2" />
+            <span>Financial Analysis</span>
+          </div>
+          <div class="bg-white dark:bg-gray-700 p-4 rounded shadow flex flex-col items-center">
+            <img src="https://img.icons8.com/color/48/microsoft-word-2019--v1.png" class="w-12 h-12 mb-2" />
+            <span>Report Writing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="max-w-screen-xl mx-auto py-20 px-6 fade-in-up">
+      <h3 class="text-2xl font-bold text-center mb-8">Projects</h3>
+      <p class="text-center text-gray-600 dark:text-gray-300">Projects will be added soon. Stay tuned!</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-blue-100 dark:bg-gray-700 py-20 fade-in-up">
+      <div class="max-w-screen-xl mx-auto px-6 text-center">
+        <h3 class="text-2xl font-bold mb-6">Contact</h3>
+        <p class="mb-2">📞 Phone: 0200136829</p>
+        <p class="mb-2">💼 LinkedIn:
+          <a href="https://www.linkedin.com/in/jerry-nelson-cobbinah-60ab911a5/"
+             class="text-blue-700 dark:text-blue-400 underline">linkedin.com/in/yourprofile</a>
+        </p>
+        <p class="mb-2">📧 Email: jerrycobbinah775@gmail.com</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 border-t dark:border-gray-700 text-center p-4 text-sm text-gray-500 dark:text-gray-400">
+      &copy; 2025 Jerry Nelson. All rights reserved.
+    </footer>
+
+    <!-- JS for mobile menu -->
+    <script>
+      document.getElementById('menu-toggle').addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>
